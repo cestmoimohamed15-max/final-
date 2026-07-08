@@ -173,31 +173,5 @@
             <div class="text-slate-600">&copy; 2026 ELG Rénovation.</div>
         </div>
     </footer>
-
-    
-
-    <script>
-        function filterProjects(event, category) {
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            event.currentTarget.classList.add('active');
-
-            document.querySelectorAll('.project-card').forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'block';
-                    setTimeout(() => card.style.opacity = '1', 50);
-                } else {
-                    card.style.opacity = '0';
-                    setTimeout(() => card.style.display = 'none', 300);
-                }
-            });
-        }
-
-        function acceptCookies() {
-          document.getElementById('cookie-banner').style.transform = 'translateY(100%)';
-        }
-        function refuseCookies() {
-          document.getElementById('cookie-banner').style.transform = 'translateY(100%)';
-        }
-    </script>
 </body>
 </html>
